@@ -2,139 +2,163 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   const links = [
-      {
-        type: "Connaissance Positive",
-        source: "1",
-        target: "7",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Négative",
-        source: "1",
-        target: "8",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "1",
-        target: "28",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "1",
-        target: "36",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "1",
-        target: "49",
-        weight: "1"
-      },
-      {
-          type: "Connaissance Neutre",
-          source: "1",
-          target: "84",
-          weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "7",
-        target: "1",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Positive",
-        source: "7",
-        target: "8",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Positive",
-        source: "7",
-        target: "3",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Positive",
-        source: "7",
-        target: "47",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "7",
-        target: "20",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "7",
-        target: "33",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "1",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "28",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "36",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "46",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "47",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "49",
-        weight: "1"
-      },
-      {
-        type: "Amour",
-        source: "69",
-        target: "68",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "55",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "82",
-        weight: "1"
-      },
-      {
-        type: "Connaissance Neutre",
-        source: "69",
-        target: "84",
-        weight: "1"
-      }
-    ];
+    {
+      type: "Connaissance Positive",
+      source: "1",
+      target: "7",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Négative",
+      source: "1",
+      target: "8",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "1",
+      target: "28",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "1",
+      target: "36",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "1",
+      target: "49",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "7",
+      target: "1",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "7",
+      target: "8",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "7",
+      target: "3",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "7",
+      target: "47",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "7",
+      target: "20",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "7",
+      target: "33",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "1",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "28",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "36",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "69",
+      target: "71",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "47",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "49",
+      weight: "1"
+    },
+    {
+      type: "Amour",
+      source: "69",
+      target: "68",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "55",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "82",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "69",
+      target: "84",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "69",
+      target: "70",
+      weight: "1"
+    },
+    {
+      type: "Amitié",
+      source: "63",
+      target: "70",
+      weight: "1"
+    },
+    {
+      type: "Amitié",
+      source: "63",
+      target: "68",
+      weight: "1"
+    },
+    {
+      type: "Ennemi",
+      source: "63",
+      target: "36",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Neutre",
+      source: "63",
+      target: "64",
+      weight: "1"
+    }
+  ];
   
     const nodes = [
       {
