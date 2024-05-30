@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:ital,wght@0,300..900;1,300..900&family=Shrikhand&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 #network-graph {
     width: 100%;
@@ -10,13 +12,15 @@ body {
     stroke: #fff;
     stroke-width: 1.5px;
 }
-.link {
-    stroke-opacity: 0.6;
-}
+
 .label {
-    font-family: Arial, sans-serif;
+    user-select: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     font-size: 12px;
-    fill: black;
+    fill: rgb(84, 84, 84);
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke: 3px black;
 }
 .tooltip {
     position: absolute;
@@ -29,4 +33,61 @@ body {
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
+}
+
+.info-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.info-header {
+    user-select: none;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-header svg {
+    height: 2em;
+    margin-right: 6px;
+}
+.info-content {
+    user-select: none;
+    display: none; /* Hidden by default */
+    padding: 10px;
+}
+.info-content a {
+    text-decoration: none;
+    color: #007BFF;
+}
+.info-content a:hover {
+    text-decoration: underline;
+    color: #076bd6;
+}
+
+.legend {
+    margin: 20px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.color-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0));
 }
