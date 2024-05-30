@@ -157,6 +157,48 @@ document.addEventListener("DOMContentLoaded", function() {
       source: "63",
       target: "64",
       weight: "1"
+    },
+    {
+      type: "Amour",
+      source: "9",
+      target: "44",
+      weight: "1"
+    },
+    {
+      type: "Amitié",
+      source: "9",
+      target: "10",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "28",
+      target: "31",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "28",
+      target: "84",
+      weight: "1"
+    },
+    {
+      type: "Connaissance Positive",
+      source: "28",
+      target: "77",
+      weight: "1"
+    },
+    {
+      type: "Ennemi",
+      source: "28",
+      target: "63",
+      weight: "1"
+    },
+    {
+      type: "Amitié",
+      source: "28",
+      target: "29",
+      weight: "1"
     }
   ];
   
