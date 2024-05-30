@@ -1146,6 +1146,126 @@ const links = [
     source: "5",
     target: "8",
     weight: "1"
+  },
+  {
+    type: "Connaissance Positive",
+    source: "3",
+    target: "4",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "3",
+    target: "8",
+    weight: "1"
+  },
+  {
+    type: "Amitié",
+    source: "3",
+    target: "11",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "3",
+    target: "12",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "3",
+    target: "46",
+    weight: "1"
+  },
+  {
+    type: "Famille",
+    source: "19",
+    target: "52",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Positive",
+    source: "19",
+    target: "30",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "35",
+    target: "37",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "35",
+    target: "36",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "35",
+    target: "31",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "35",
+    target: "33",
+    weight: "1"
+  },
+  {
+    type: "Amour",
+    source: "35",
+    target: "11",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Positive",
+    source: "35",
+    target: "76",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Positive",
+    source: "59",
+    target: "61",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "59",
+    target: "30",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Neutre",
+    source: "70",
+    target: "28",
+    weight: "1"
+  },
+  {
+    type: "Amitié",
+    source: "70",
+    target: "71",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Positive",
+    source: "70",
+    target: "57",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Positive",
+    source: "70",
+    target: "64",
+    weight: "1"
+  },
+  {
+    type: "Connaissance Positive",
+    source: "3",
+    target: "36",
+    weight: "1"
   }
 ];
   
