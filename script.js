@@ -207,12 +207,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const infoPanel = document.getElementById("infoPanel");
 
     infoHeader.addEventListener("click", () => {
-        infoContent.style.display = infoContent.style.display === "block" ? "none" : "block";
+        infoContent.classList.toggle("open");
     });
 
     document.addEventListener("click", (event) => {
-        if (!infoPanel.contains(event.target) && infoContent.style.display === "block") {
-            infoContent.style.display = "none";
+        if (!infoPanel.contains(event.target)) {
+            infoContent.classList.remove("open");
         }
     });
+
 });
