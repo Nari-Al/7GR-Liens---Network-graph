@@ -77,6 +77,23 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("in", "SourceGraphic")
             .attr("stdDeviation", 3); // Adjust for more/less blur
 
+        filter.append("feComposite")
+            .attr("in", "SourceGraphic")
+            .attr("operator", "over")
+            .attr("result", "blur");
+
+        filter.append("feColorMatrix")
+            .attr("in", "blur")
+            .attr("type", "matrix")
+            .attr("values", "1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.3 0")
+            .attr("result", "glass");
+
+        filter.append("feBlend")
+            .attr("mode", "normal")
+            .attr("in", "SourceGraphic")
+            .attr("in2", "glass")
+            .attr("result", "shape");
+
         const colorPalette = {
             1: "#57B9A0", 2: "#E85968", 3: "#52ACCC", 4: "#E7A54A",
             5: "#9C84D8", 6: "#82B34D", 7: "#D477AB", 8: "#E97058",
