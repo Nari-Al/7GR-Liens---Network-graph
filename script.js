@@ -64,6 +64,20 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("height", "100%")
             .attr("fill", "#545454");
 
+        const defs = svg.append("defs");
+
+        const filter = defs.append("filter")
+            .attr("id", "blur")
+            .attr("x", "-50%")
+            .attr("y", "-50%")
+            .attr("width", "200%")
+            .attr("height", "200%");
+
+        filter.append("feGaussianBlur")
+            .attr("in", "SourceGraphic")
+            .attr("stdDeviation", 3); // Adjust for more/less blur
+
+
         const colorPalette = {
             1: "#57B9A0", 2: "#E85968", 3: "#52ACCC", 4: "#E7A54A",
             5: "#9C84D8", 6: "#82B34D", 7: "#D477AB", 8: "#E97058",
@@ -114,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("r", d => 5 + d.degree * 2)
             .attr("fill", d => color(d.group))
             .attr("fill-opacity", nodeBaseOpacity)
+            .attr("filter", "url(#blur)") // Add filter for blur effect
             .call(drag(simulation))
             .on("mouseover", highlight)
             .on("mouseout", unhighlight);
