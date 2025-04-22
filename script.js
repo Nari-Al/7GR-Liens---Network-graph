@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         filter.append("feGaussianBlur")
             .attr("in", "SourceGraphic")
-            .attr("stdDeviation", 3); // Adjust for more/less blur
+            .attr("stdDeviation", 5); // Adjust for more/less blur
 
         filter.append("feComposite")
             .attr("in", "SourceGraphic")
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filter.append("feColorMatrix")
             .attr("in", "blur")
             .attr("type", "matrix")
-            .attr("values", "1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.3 0")
+            .attr("values", "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.3 0")
             .attr("result", "glass");
 
         filter.append("feBlend")
