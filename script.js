@@ -64,36 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("height", "100%")
             .attr("fill", "#333333");
 
-        const defs = svg.append("defs");
-
-        const filter = defs.append("filter")
-            .attr("id", "blur")
-            .attr("x", "-50%")
-            .attr("y", "-50%")
-            .attr("width", "200%")
-            .attr("height", "200%");
-
-        filter.append("feGaussianBlur")
-            .attr("in", "SourceGraphic")
-            .attr("stdDeviation", 5); // Adjust for more/less blur
-
-        filter.append("feComposite")
-            .attr("in", "SourceGraphic")
-            .attr("operator", "over")
-            .attr("result", "blur");
-
-        filter.append("feColorMatrix")
-            .attr("in", "blur")
-            .attr("type", "matrix")
-            .attr("values", "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.3 0")
-            .attr("result", "glass");
-
-        filter.append("feBlend")
-            .attr("mode", "normal")
-            .attr("in", "SourceGraphic")
-            .attr("in2", "glass")
-            .attr("result", "shape");
-
         const colorPalette = {
             1: "#57B9A0", 2: "#E85968", 3: "#52ACCC", 4: "#E7A54A",
             5: "#9C84D8", 6: "#82B34D", 7: "#D477AB", 8: "#E97058",
@@ -144,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("r", d => 5 + d.degree * 2)
             .attr("fill", d => color(d.group))
             .attr("fill-opacity", nodeBaseOpacity)
-            .attr("filter", "url(#blur)") // 🔥 Blur effect
             .call(drag(simulation))
             .on("mouseover", highlight)
             .on("mouseout", unhighlight);
