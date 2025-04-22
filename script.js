@@ -62,21 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         svg.append("rect")
             .attr("width", "100%")
             .attr("height", "100%")
-            .attr("fill", "#545454");
-
-        const defs = svg.append("defs");
-
-        const filter = defs.append("filter")
-            .attr("id", "blur")
-            .attr("x", "-50%")
-            .attr("y", "-50%")
-            .attr("width", "200%")
-            .attr("height", "200%");
-
-        filter.append("feGaussianBlur")
-            .attr("in", "SourceGraphic")
-            .attr("stdDeviation", 3); // Adjust for more/less blur
-
+            .attr("fill", "#333333");
 
         const colorPalette = {
             1: "#57B9A0", 2: "#E85968", 3: "#52ACCC", 4: "#E7A54A",
@@ -122,12 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .enter().append("a")
             .attr("href", d => d.url)
             .attr("target", "_blank");
-
-        nodeGroup.append("circle") // Background blurred glow
-            .attr("r", d => 5 + d.degree * 2 + 4)
-            .attr("fill", d => color(d.group))
-            .attr("fill-opacity", 0.2)
-            .attr("filter", "url(#blur)");
 
         const node = nodeGroup.append("circle")
             .attr("class", "node")
