@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderGraph(nodes, links) {
         const graph = { nodes, links };
 
-        const nodeBaseOpacity = 0.5;
+        const nodeBaseOpacity = 0.6;
         const linkBaseOpacity = 0.2;
 
         const nodeDegrees = {};
@@ -123,12 +123,17 @@ document.addEventListener("DOMContentLoaded", function () {
             .attr("href", d => d.url)
             .attr("target", "_blank");
 
+        nodeGroup.append("circle") // Background blurred glow
+            .attr("r", d => 5 + d.degree * 2 + 4)
+            .attr("fill", d => color(d.group))
+            .attr("fill-opacity", 0.2)
+            .attr("filter", "url(#blur)");
+
         const node = nodeGroup.append("circle")
             .attr("class", "node")
             .attr("r", d => 5 + d.degree * 2)
             .attr("fill", d => color(d.group))
             .attr("fill-opacity", nodeBaseOpacity)
-            .attr("filter", "url(#blur)") // Add filter for blur effect
             .call(drag(simulation))
             .on("mouseover", highlight)
             .on("mouseout", unhighlight);
